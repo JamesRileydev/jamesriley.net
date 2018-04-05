@@ -1,0 +1,195 @@
+body {
+	margin: auto;
+	max-width: 900px;
+	/* border: 1px solid black; */
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+	display: flex;
+	margin: 10px;
+	padding: 10px 0;
+	justify-content: space-around;
+	flex-direction: row-reverse;
+	align-items: center;
+	overflow:hidden;
+}
+
+
+.me {
+	width: 100px;
+}
+
+.my-name {
+	font-size: 30px;
+}
+
+ .my-name{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 70%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/***Animiation***/
+
+.me:hover {
+  transform: rotateZ( 360deg );
+	transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+/**** Navigation ****/
+
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	border-top: 1.5px  solid #36c136;
+	border-bottom: 1.5px  solid #36c136;
+}
+
+.nav-div {
+	display: flex;
+	margin: 10px;
+	padding-right: 30px;
+}
+
+.nav-div img {
+	width: 20px;
+	height: 20px;
+	opacity: 1.0;
+	transition: opacity .6s;
+}
+ 
+.nav-div img:hover {
+	opacity: 0.3;
+}
+
+#mail {
+	margin-top: 3px;
+	width: 23px;
+	height: 16px;
+}
+
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+nav a:hover {
+  color: #36c136;
+}
+
+.full-width {
+	display: flex;
+	margin: auto;
+	width: 900px;
+	
+}
+
+.half-width div {
+	display: flex;
+	justify-content: center;
+}
+
+.half-width {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	padding: 20px;
+}
+
+
+/**** Inputs ****/
+
+
+.rotate:hover {
+	-webkit-transform: rotateZ(-30deg);
+	-ms-transform: rotateZ(-30deg);
+	transform: rotateZ(-30deg);
+}
+
+
+ /**** Projects ****/
+
+label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0px 20px 0px;
+}
+
+.projects-container {
+	display: flex;
+	justify-content: space-around;
+	border-top: 1.5px  solid #36c136;
+}
+
+.projects-container div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	height: 180px;
+	width: 250px;
+	transition: all .3s ease-in-out;
+	border-radius: 10px;
+	box-shadow: 1px 1px 10px rgba(211, 211, 211);
+}
+
+#trail-app-link {
+	background-image: url("img/GR_Tablet.png");
+	background-size: contain;
+}
+
+#turn-based-link {
+	background-image: url("img/turn-based-game.png");
+	background-size: contain;
+	background-position: center; 
+}
+
+#todo-app-link {
+	background-image: url("img/todo-list.png");
+	background-size: contain;
+	background-position: center; 
+}
+
+.projects-container div:hover {
+  transform: scale(1.1); 
+}
+
+@media (max-width: 800px) {
+	nav {
+		justify-content: center;
+	}
+
+	.projects-container {
+	flex-direction: column;
+	justify-content: center;
+	}
+
+	.full-width {
+		flex-direction: column;
+		align-items: center;
+		width: auto;
+	}
+
+	.half-width {
+		max-width: 300px;
+	}
+}
